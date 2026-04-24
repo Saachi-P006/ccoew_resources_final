@@ -1,0 +1,105 @@
+/* Full-page background */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f8f8, #e0e0e0);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Login card */
+.login-card {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+/* Back to Home link */
+.back-home {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-home:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.login-card h2 {
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* Form styling */
+.login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(128,0,0,0.3);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #1434A4;
+}
+
+/* Error message */
+.error-msg {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+
+  .login-form input {
+    padding: 10px 12px;
+  }
+
+  .login-form button {
+    padding: 10px;
+  }
+
+  .back-home {
+    font-size: 13px;
+    top: 10px;
+    left: 15px;
+  }
+}

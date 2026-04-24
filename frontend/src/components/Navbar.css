@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.95); /* semi-transparent for sticky effect */
+  color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1f1f1f;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger .bar {
+  width: 26px;
+  height: 3px;
+  background-color: #1f1f1f;
+  border-radius: 2px;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav-links li a:hover {
+  color: #3498db;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 16px;
+    flex-direction: column;
+    background: rgba(255,255,255,0.98);
+    width: calc(100% - 32px);
+    border-radius: 8px;
+    padding: 12px;
+    display: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li a {
+    color: #1f1f1f;
+    padding: 8px 12px;
+  }
+}
+
+/* Navbar scroll effect */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95); /* fully opaque */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.21); /* stronger shadow */
+}
+
+.teacher-btn {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.teacher-btn:hover {
+  background-color: #a00000;
+}

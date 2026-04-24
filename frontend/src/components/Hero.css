@@ -1,0 +1,97 @@
+/* Hero Section Container */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start; /* shift content towards top */
+  padding: 20px 20px; /* reduce top padding to lift content */
+  margin-top: -30px; /* lift entire section slightly */
+  overflow: hidden;
+  box-sizing:border-box;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  max-width: 650px;
+  padding: 40px 0;
+  color: #ffffff; /* bright white */
+  text-shadow: 0 0 12px rgba(0,0,0,0.3); /* stronger shadow for readability */
+  margin-left: 0;
+  z-index: 10;
+  line-height: 1.8; /* more spacing for long paragraphs */
+  font-size: 1.1rem; /* slightly bigger for readability */
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  opacity: 1;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+
+/* Hero Button */
+.hero-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #3498db;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #1f7abd;
+}
+
+/* Calendar container inside hero */
+.hero-calendar-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; /* align top with text */
+  margin-top: -20px; /* lift calendar slightly */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px; /* smaller lift on mobile */
+  }
+
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .hero-calendar-container {
+    margin-top: -10px; /* smaller lift on mobile */
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
